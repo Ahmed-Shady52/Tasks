@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <data>
+        <record id="action_report_expiry_product_pdf" model="ir.actions.report">
+        <field name="name">Expiry Product</field>
+        <field name="model">expiry_product.report.wizard</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">inventory_sales_custom.report_expiry_product_pdf</field>
+        <field name="report_file">inventory_sales_custom.report_expiry_product_pdf</field>
+        <field name="binding_model_id" ref="model_expiry_product_report_wizard"/>
+        <field name="binding_type">report</field>
+    </record>
+    </data>
+</odoo>
+

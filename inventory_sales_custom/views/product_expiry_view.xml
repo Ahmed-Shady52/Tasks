@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <data>
+
+        <record id="product_expiry_form" model="ir.ui.view">
+            <field name="name">product.expiry.view</field>
+            <field name="model">product.expiry</field>
+            <field name="arch" type="xml">
+                <form name="Products">
+                    <sheet>
+                        <header>
+                            <button name="%(action_expiring_product_report)d" type="action" string="Report" class="btn-primary"/>
+                        </header>
+                        <group>
+                            <group>
+                                <field name="product_id"/>
+                                <field name="quantity"/>
+                            </group>
+                            <group>
+                                <field name="expiry_date"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="product_expiry_tree" model="ir.ui.view">
+            <field name="name">product.expiry.tree</field>
+            <field name="model">product.expiry</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="product_id"/>
+                    <field name="quantity"/>
+                    <field name="expiry_date"/>
+                </tree>
+            </field>
+        </record>
+
+
+
+
+
+
+        <record id="action_product_expiry" model="ir.actions.act_window">
+            <field name="name">Products</field>
+            <field name="res_model">product.expiry</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+
+    </data>
+</odoo>
+
+
+
