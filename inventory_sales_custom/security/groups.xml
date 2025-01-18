@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <data>
+
+        <record id="group_inventory_expiry_manager" model="res.groups">
+            <field name="name">Inventory Expiry Manager</field>
+            <field name="category_id" ref="base.module_category_inventory_inventory"/>
+<!--            <field name="implied_ids" eval="[(4, ref('employee_certifications.group_hr_employee'))]"/>-->
+            <field name="comment">manager</field>
+        </record>
+
+
+
+
+
+
+
+    </data>
+</odoo>

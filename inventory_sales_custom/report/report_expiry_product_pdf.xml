@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <data>
+        <template id="report_expiry_product_pdf">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div class="oe_structure"/>
+                        <div class="text-center">
+                            <h2>Expiring Products</h2>
+                        </div>
+                        <br/>
+
+                        <table class="table table-bordered mt32">
+                            <thead>
+                                <tr>
+                                    <th name="th_no" class="text-left">
+                                        <span>No.</span>
+                                    </th>
+                                    <th name="th_product" class="text-left">
+                                        <span>Product</span>
+                                    </th>
+                                    <th name="th_quantity" class="text-left">
+                                        <span>Quantity</span>
+                                    </th>
+                                    <th name="th_expiry_date" class="text-left">
+                                        <span>Expiry Date</span>
+                                    </th>
+                                </tr>
+                            </thead>
+
+                            <t t-set="n" t-value="0"/>
+
+                            <t t-foreach="products" t-as="product">
+                                <tr>
+                                    <td>
+                                        <span t-esc="n+1"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="product['product_id']"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="product['quantity']"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="product['expiry_date']"/>
+                                    </td>
+                                </tr>
+                                <t t-set="n" t-value="n+1"/>
+                            </t>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>
+
+

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <data>
+
+        <menuitem
+            id="inventory_sales_custom.menu_root"
+            name="product_expiry"
+            action="inventory_sales_custom.action_product_expiry"
+            sequence="1"/>
+        <menuitem
+            id="menu_product_expiry"
+            name="Product Expiry"
+            action="inventory_sales_custom.action_product_expiry"
+            parent="stock.menu_stock_root"/>
+
+    </data>
+</odoo>
+
+
+

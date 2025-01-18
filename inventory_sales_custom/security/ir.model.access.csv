@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_inventory_sales_custom,inventory_sales_custom,model_product_expiry,,1,0,0,0
+access_product_expiry_inventory_manager,access_product_expiry_inventory_manager,model_product_expiry,inventory_sales_custom.group_inventory_expiry_manager,1,1,1,1
+inventory_sales_custom.access_expiry_product_report_wizard,access_expiry_product_report_wizard,inventory_sales_custom.model_expiry_product_report_wizard,base.group_user,1,1,1,1
