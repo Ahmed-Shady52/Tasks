@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+<!--    creating menus to access the models -->
+    <menuitem name="Certifications" id="employee_certifications.menu_root" action="employee_certifications.action_employee_certification" sequence="1"/>
+    <menuitem name="Certifications" id="menu_hr_certifications" action="employee_certifications.action_employee_certification" parent="hr.menu_hr_employee_payroll"/>
+
+</odoo>
+
