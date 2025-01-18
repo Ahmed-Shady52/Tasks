@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+    <data>
+<!--        creating a custom form view for the employee certification model to create a new certification-->
+        <record id="employee_certification_form" model="ir.ui.view">
+            <field name="name">employee.certification.form</field>
+            <field name="model">employee.certification</field>
+            <field name="arch" type="xml">
+                <form name="Certifications">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="employee_id"/>
+                                <field name="status"/>
+                            </group>
+                            <group>
+                                <field name="certification_date"/>
+                                <field name="expiry_date"/>
+                                <field name="notes"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+<!--        creating a tree/list view for data display-->
+        <record id="employee_certification_tree" model="ir.ui.view">
+            <field name="name">employee.certification.tree</field>
+            <field name="model">employee.certification</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="employee_id"/>
+                    <field name="name"/>
+                    <field name="certification_date"/>
+                    <field name="expiry_date"/>
+                    <field name="status"/>
+                    <field name="notes"/>
+                </tree>
+            </field>
+        </record>
+
+<!--        creating custom ready filters for easy management -->
+        <record id="employee_certification_search" model="ir.ui.view">
+            <field name="name">employee.certification.search</field>
+            <field name="model">employee.certification</field>
+            <field name="priority" eval="10"/>
+            <field name="arch" type="xml">
+                <search string="States">
+                    <filter string="Valid Certificate" name="Valid Certificate" domain="[('status','=','valid')]"/>
+                    <filter string="Invalid Certificate" name="Expired Certificate" domain="[('status','=','expired')]"/>
+                </search>
+            </field>
+        </record>
+
+
+<!--            creating an action to call the custom views to be displayed-->
+        <record id="action_employee_certification" model="ir.actions.act_window">
+            <field name="name">Certifications</field>
+            <field name="res_model">employee.certification</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+
+    </data>
+</odoo>
+
+
+
+
+
+
+
+
+
+
+
